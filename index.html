@@ -27,6 +27,10 @@
        .attr('width', xWidth)
        .attr('x', (_, i) => i * xSpacing);
 
+    svg.selectAll('rect')
+       .data(yValues)
+       .attr('height', (yVal) => yVal)
+       .attr('y', (yVal) => svgHeight - yVal);
   };
 
 </script>
