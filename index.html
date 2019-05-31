@@ -7,7 +7,8 @@
       const json = JSON.parse(req.responseText);
     };
   });
-  const createBarChart = (data) => {
+
+  const createBarChart = (xValues, yValues) => {
     const w = 500;
     const h = 500;
     const padding = 30;
