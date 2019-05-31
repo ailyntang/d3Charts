@@ -12,11 +12,20 @@
     const svgWidth = 500;
     const svgHeight = 500;
     const padding = 30;
+    const xWidth = 4;
+    const xSpacing = xWidth + 1;
 
     const svg = d3.select('body')
                   .append('svg')
                   .attr('width', svgWidth)
                   .attr('height', svgHeight);
+
+    svg.selectAll('rect')
+       .data(xValues)
+       .enter()
+       .append('rect')
+       .attr('width', xWidth)
+       .attr('x', (_, i) => i * xSpacing);
 
   };
 
