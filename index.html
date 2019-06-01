@@ -30,7 +30,7 @@
        .enter()
        .append('rect')
        .attr('width', xWidth)
-       .attr('x', (d, i) => xScale(i));
+       .attr('x', (x) => xScale(x));
 
     svg.selectAll('rect')
        .data(yValues)
