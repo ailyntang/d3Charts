@@ -21,6 +21,10 @@
                   .attr('width', svgWidth)
                   .attr('height', svgHeight);
 
+    const xScale = d3.scaleLinear()
+                     .domain([0, d3.max(xValues)])
+                     .range([padding, svgWidth - padding]);
+
     svg.selectAll('rect')
        .data(xValues)
        .enter()
