@@ -12,9 +12,12 @@
   const createBarChart = (xValues, yValues) => {
     const svgWidth = 500;
     const svgHeight = 500;
-    const xWidth = 4;
-    const xSpacing = xWidth + 1;
     const svgPadding = 30;
+
+    const xPadding = 1;
+
+    // dynamic width for regularly spaced x values
+    const xWidth = svgWidth / xValues.length - xPadding;
 
     const svg = d3.select('body')
                   .append('svg')
