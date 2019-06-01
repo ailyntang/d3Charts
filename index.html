@@ -45,8 +45,8 @@
 
     svg.selectAll('rect')
        .data(yValues)
-       .attr('height', (yVal) => yVal)
-       .attr('y', (yVal) => svgHeight - yVal);
+       .attr('height', (yVal) => yScale(yVal))
+       .attr('y', (yVal) => svgHeight - yScale(yVal));
   };
 
 </script>
