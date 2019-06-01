@@ -49,6 +49,11 @@
        .data(yValues)
        .attr('height', (yVal) => yScale(yVal))
        .attr('y', (yVal) => svgHeight - yScale(yVal));
+
+    const xAxis = d3.axisBottom(xScale);
+    svg.append('g')
+       .attr('transform', 'translate(0, 0')
+       .call(xAxis)
   };
 
 </script>
