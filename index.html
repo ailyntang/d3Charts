@@ -17,7 +17,11 @@
     const svgPadding = 30;
     const xPadding = 1;
     // dynamic width for regularly spaced x values
-    const xWidth = svgWidth / xValues.length - xPadding;
+    let xWidth = svgWidth / xValues.length - xPadding;
+
+    if (xWidth <= 0) {
+      xWidth = 1;
+    }
 
     const svg = d3.select('body')
                   .append('svg')
