@@ -5,6 +5,7 @@
     req.send();
     req.onload = function() {
       const json = JSON.parse(req.responseText);
+      const xValues = json.data.map((d) => new Date(d[0]));
       const yValues = json.data.map((d) => d[1]);
     };
   });
