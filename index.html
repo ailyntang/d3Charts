@@ -12,9 +12,9 @@
   const createBarChart = (xValues, yValues) => {
     const svgWidth = 500;
     const svgHeight = 500;
-    const padding = 30;
     const xWidth = 4;
     const xSpacing = xWidth + 1;
+    const svgPadding = 30;
 
     const svg = d3.select('body')
                   .append('svg')
@@ -23,7 +23,7 @@
 
     const xScale = d3.scaleTime()
                      .domain([d3.min(xValues), d3.max(xValues)])
-                     .range([padding, svgWidth - padding]);
+                     .range([svgPadding, svgWidth - svgPadding]);
 
     svg.selectAll('rect')
        .data(xValues)
