@@ -41,6 +41,7 @@
        .data(xValues)
        .enter()
        .append('rect')
+       .attr('class', 'bar')
        .attr('width', xWidth)
        .attr('x', (x) => xScale(x));
 
