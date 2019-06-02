@@ -52,7 +52,7 @@
     svg.selectAll('rect')
        .data(yValues)
        .attr('height', (yVal) => chartHeight - yScale(yVal))
-       .attr('y', (yVal) => yScale(yVal));
+       .attr('y', (yVal) => yScale(yVal) + svgPadding);
 
     const xAxis = d3.axisBottom(xScale);
     svg.append('g')
