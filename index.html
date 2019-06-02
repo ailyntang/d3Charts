@@ -12,12 +12,13 @@
   });
 
   const createBarChart = (xValues, yValues) => {
-    const svgWidth = 500;
-    const svgHeight = 500;
-    const svgPadding = 30;
     const chartWidth = 800;
     const chartHeight = 500;
 
+    const svgPadding = 60;
+    const svgWidth = chartWidth + (svgPadding * 2);
+    const svgHeight = chartHeight + (svgPadding * 2);
+    
     const xPadding = 1;
 
     // dynamic width for regularly spaced x values
