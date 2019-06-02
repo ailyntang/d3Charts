@@ -47,7 +47,8 @@
        .append('rect')
        .attr('class', 'bar')
        .attr('width', xWidth)
-       .attr('x', (x) => xScale(x));
+       .attr('x', (x) => xScale(x))
+       .attr('data-date', (x) => x);
 
     svg.selectAll('rect')
        .data(yValues)
