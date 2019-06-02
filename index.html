@@ -35,7 +35,7 @@
 
     const yScale = d3.scaleLinear()
                      .domain([0, d3.max(yValues)])
-                     .range([svgPadding, svgHeight - svgPadding]);
+                     .range([svgPadding, svgHeight - (svgPadding * 2)]);
 
     svg.selectAll('rect')
        .data(xValues)
