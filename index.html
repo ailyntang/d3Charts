@@ -53,7 +53,8 @@
     svg.selectAll('rect')
        .data(yValues)
        .attr('height', (yVal) => chartHeight - yScale(yVal))
-       .attr('y', (yVal) => yScale(yVal) + svgPadding);
+       .attr('y', (yVal) => yScale(yVal) + svgPadding)
+       .attr('data-gdp', (y) => y);
 
     const xAxis = d3.axisBottom(xScale);
     const yAxis = d3.axisLeft(yScale);
