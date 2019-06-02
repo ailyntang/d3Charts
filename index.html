@@ -35,7 +35,7 @@
 
     const xScale = d3.scaleTime()
                      .domain([d3.min(xValues), d3.max(xValues)])
-                     .range([svgPadding, svgWidth - svgPadding]);
+                     .range([0, chartWidth]);
 
     const yScale = d3.scaleLinear()
                      .domain([0, d3.max(yValues)])
