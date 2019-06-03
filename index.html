@@ -69,6 +69,20 @@
        .call(yAxis);
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+  /**
+   * Creates an array of (date, number) elements to display as a tooltip.
+   *
+   * @param {array} xValues An array of `Date` elements
+   * @param {array} yValues An array of floats with one decimal point
+   *
+   * @return {array} An array of (date, number) elements, displayed as (mmm-yyyy, xxx.x). e.g. (Jan 1930, 242.5)
+  */
+  const structureXYDataForTooltip = (xValues, yValues) => {
+    const xValuesFormatted = xValues.map((x) => MONTHS[x.getMonth()] + ' ' + x.getFullYear());
+    const xyValues = xValuesFormatted.map((x,i) => [x, yValues[i]]);
+    return xyValues;
+  };
+
   };
 
 </script>
