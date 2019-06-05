@@ -87,7 +87,7 @@
   */
   const structureXYDataForTooltip = (xValues, yValues) => {
     const xValuesFormatted = xValues.map((x) => MONTHS[x.getMonth()] + ' ' + x.getFullYear());
-    const xyValues = xValuesFormatted.map((x,i) => [x, yValues[i]]);
+    const xyValues = xValuesFormatted.map((x,i) => x + '\n$' + formatMoney(yValues[i]) + ' billion');
     return xyValues;
   };
 
