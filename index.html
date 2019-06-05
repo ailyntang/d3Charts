@@ -8,6 +8,7 @@
       const xValues = json.data.map((d) => new Date(d[0]));
       const yValues = json.data.map((d) => d[1]);
       createBrowserTitle("USA's GDP");
+      createChartTitle("USA's GDP by quarter (US$ billions)")
       createBarChart(xValues, yValues);
     };
   });
