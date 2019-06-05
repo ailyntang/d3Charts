@@ -19,6 +19,13 @@
       .text(title);
   };
 
+  const createChartTitle = (title) => {
+    d3.select('body')
+      .append('h1')
+      .text(title)
+      .style('text-align', 'center');
+  };
+
   const createBarChart = (xValues, yValues) => {
     const chartWidth = 800;
     const chartHeight = 500;
