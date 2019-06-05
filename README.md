@@ -1,7 +1,7 @@
 # d3Charts
 *Visualisations of data using d3, based on the freeCodeCamp curriculum*
 
-For these projects, I've focused on learning d3 rather than CSS, even though it kills me to have ugly charts! My goal is to understand enough d3 so that I can move on to build a full stack project.
+See these projects live at [https://ailyntang.github.io/d3Charts/]()
 
 Also, I have moved on even though some tests have failed. The failing tests are those which I deem as design decisions, rather than those testing an accurate implementation of the d3 library.
 
