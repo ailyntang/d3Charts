@@ -67,6 +67,7 @@
        .attr('id', 'y-axis')
        .attr('transform', 'translate(' + svgPadding + ', ' + svgPadding + ')')
        .call(yAxis);
+
     const xyValues = structureXYDataForTooltip(xValues, yValues);
     svg.selectAll('rect')
        .data(xyValues)
@@ -91,6 +92,12 @@
   };
 
   };
+  /**
+   * Takes a float and returns an integer with commas, e.g. 1234.5 returns 1,235
+  */
+  const formatMoney = (number) => {
+    return Math.round(number).toLocaleString();
+  }
 
 </script>
 
