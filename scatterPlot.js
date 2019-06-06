@@ -19,4 +19,12 @@ const createScatterPlot = (xValues, yValues, radius) => {
                 .attr('height', svgHeight);
 };
 
+const combineXYValues = (xValues, yValues) => {
+  if (xValues.length != yValues.length) {
+    throw new Error('There are different numbers of x and y values.');
+  }
+
+  return xValues.map((x,i) => [x, yValues[i]]);
+};
+
 createBrowserTitle('Scatter Plot');
