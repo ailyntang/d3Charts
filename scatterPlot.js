@@ -20,6 +20,12 @@ const createScatterPlot = (xValues, yValues, radius) => {
                 .attr('width', svgWidth)
                 .attr('height', svgHeight);
 
+  const tooltip = d3.select('body')
+                    .data(data)
+                    .append('div')
+                    .attr('id', 'tooltip')
+                    .attr('data-year', (d) => d[0]);
+
   svg.selectAll('circle')
      .data(data)
      .enter()
