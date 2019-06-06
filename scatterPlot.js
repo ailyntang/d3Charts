@@ -24,6 +24,7 @@ const createScatterPlot = (xValues, yValues, radius) => {
      .data(data)
      .enter()
      .append('circle')
+     .attr('class', 'dot')
      .attr('cx', (d) => d[0])
      .attr('cy', (d) => d[1])
      .attr('r', radius);
@@ -38,3 +39,9 @@ const combineXYValues = (xValues, yValues) => {
 };
 
 createBrowserTitle('Scatter Plot');
+
+const xValues = [223,215,63,653];
+const yValues = [73, 124, 753, 444];
+
+createScatterPlot(xValues, yValues, 5);
+
