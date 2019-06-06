@@ -13,6 +13,8 @@ const createScatterPlot = (xValues, yValues, radius) => {
   const chartWidth = svgWidth - (chartPadding * 2);
   const chartHeight = svgHeight - (chartPadding * 2);
 
+  const data = combineXYValues(xValues, yValues);
+
   const svg = d3.select('body')
                 .append('svg')
                 .attr('width', svgWidth)
