@@ -25,6 +25,8 @@ const createScatterPlot = (xValues, yValues, radius) => {
      .enter()
      .append('circle')
      .attr('class', 'dot')
+     .attr('data-xvalue', (d) => d[0])
+     .attr('data-yvalue', (d) => d[1])
      .attr('cx', (d) => d[0])
      .attr('cy', (d) => d[1])
      .attr('r', radius);
