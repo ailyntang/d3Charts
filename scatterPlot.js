@@ -19,6 +19,14 @@ const createScatterPlot = (xValues, yValues, radius) => {
                 .append('svg')
                 .attr('width', svgWidth)
                 .attr('height', svgHeight);
+
+  svg.selectAll('circle')
+     .data(data)
+     .enter()
+     .append('circle')
+     .attr('cx', (d) => d[0])
+     .attr('cy', (d) => d[1])
+     .attr('r', radius);
 };
 
 const combineXYValues = (xValues, yValues) => {
