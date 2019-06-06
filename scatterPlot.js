@@ -5,4 +5,7 @@ const createBrowserTitle = (title) => {
     .text(title);
 };
 
+const createScatterPlot = (xValues, yValues, radius) => {
+};
+
 createBrowserTitle('Scatter Plot');
