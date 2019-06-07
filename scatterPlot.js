@@ -46,6 +46,14 @@ const combineXYValues = (xValues, yValues) => {
   return xValues.map((x,i) => [x, yValues[i]]);
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+  const req = new XMLHttpRequest();
+  req.open('GET', 'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json', true);
+  req.send();
+  req.onload = () => {
+    const json = JSON.parse(req.responseText);
+  };
+});
 createBrowserTitle('Scatter Plot');
 
 const xValues = [223,215,63,653];
