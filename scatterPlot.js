@@ -1,4 +1,5 @@
     const xValues = extractXValueAsInt(json);
+    const yValues = extractYValueAsInt(json);
 const createBrowserTitle = (title) => {
   d3.select('body')
     .append('title')
