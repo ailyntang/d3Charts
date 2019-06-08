@@ -32,6 +32,10 @@ const createScatterPlot = (xValues, yValues, radius) => {
                 .attr('width', svgWidth)
                 .attr('height', svgHeight);
 
+  const xScale = d3.scaleLinear()
+                   .domain([d3.min(xValues), d3.max(xValues)])
+                   .range([chartPadding, chartWidth]);
+
   const tooltip = d3.select('body')
                     .data(data)
                     .append('div')
