@@ -1,3 +1,4 @@
+    const xValues = extractXValueAsInt(json);
 const createBrowserTitle = (title) => {
   d3.select('body')
     .append('title')
