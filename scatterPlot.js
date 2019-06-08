@@ -54,10 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const json = JSON.parse(req.responseText);
   };
 });
-createBrowserTitle('Scatter Plot');
-
-const xValues = [223,215,63,653];
-const yValues = [73, 124, 753, 444];
 const extractXValueAsInt = (data) => {
   const xValues = data.map((obj) => obj.Year);
   return xValues;
@@ -80,5 +76,4 @@ const extractYValueAsInt = (data) => {
 };
 
 
-createScatterPlot(xValues, yValues, 5);
 
