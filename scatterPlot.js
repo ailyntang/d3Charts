@@ -63,6 +63,17 @@ const extractXValueAsInt = (data) => {
   return xValues;
 };
 
+const extractYValueAsDate = (data) => {
+  const secondsAsInt = data.map((obj) => obj.Seconds);
+  const secondsAsDate = secondsAsInt.map((int) => {
+    const date = new Date(1970, 0, 1);
+    date.setSeconds(int);
+    return date;
+  });
+
+  return secondsAsDate;
+};
+
 
 createScatterPlot(xValues, yValues, 5);
 
