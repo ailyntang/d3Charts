@@ -27,11 +27,13 @@ const createScatterPlot = (xValues, yValues, radius) => {
 
   const xyValues = combineXYValues(xValues, yValues);
 
+  // Create svg container
   const svg = d3.select('body')
                 .append('svg')
                 .attr('width', svgWidth)
                 .attr('height', svgHeight);
 
+  // Create scales
   const xScale = d3.scaleLinear()
                    .domain([d3.min(xValues), d3.max(xValues)])
                    .range([chartPadding, chartWidth]);
@@ -46,6 +48,7 @@ const createScatterPlot = (xValues, yValues, radius) => {
                     .attr('id', 'tooltip')
                     .attr('data-year', (d) => d[0]);
 
+  // Create data points
   svg.selectAll('circle')
      .data(xyValues)
      .enter()
