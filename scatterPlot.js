@@ -53,8 +53,8 @@ const createScatterPlot = (xValues, yValues, radius) => {
      .attr('class', 'dot')
      .attr('data-xvalue', (d) => d[0])
      .attr('data-yvalue', (d) => d[1])
-     .attr('cy', (d) => d[1])
      .attr('cx', (d) => xScale(d[0]))
+     .attr('cy', (d) => chartHeight - yScale(d[1]))
      .attr('r', radius);
 };
 
