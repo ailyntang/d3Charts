@@ -62,6 +62,11 @@ const createScatterPlot = (xValues, yValues, radius) => {
   svg.append('g')
      .attr('id', 'x-axis')
      .call(xAxis);
+
+  const yAxis = d3.axisLeft(yScale);
+  svg.append('g')
+     .attr('id', 'y-axis')
+     .call(yAxis);
 };
 
 const combineXYValues = (xValues, yValues) => {
