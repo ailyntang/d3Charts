@@ -25,7 +25,7 @@ const createScatterPlot = (xValues, yValues, radius) => {
   const chartWidth = svgWidth - (chartPadding * 2);
   const chartHeight = svgHeight - (chartPadding * 2);
 
-  const data = combineXYValues(xValues, yValues);
+  const xyValues = combineXYValues(xValues, yValues);
 
   const svg = d3.select('body')
                 .append('svg')
@@ -41,13 +41,13 @@ const createScatterPlot = (xValues, yValues, radius) => {
                    .range([chartHeight, chartPadding]);
 
   const tooltip = d3.select('body')
-                    .data(data)
+                    .data(xyValues)
                     .append('div')
                     .attr('id', 'tooltip')
                     .attr('data-year', (d) => d[0]);
 
   svg.selectAll('circle')
-     .data(data)
+     .data(xyValues)
      .enter()
      .append('circle')
      .attr('class', 'dot')
