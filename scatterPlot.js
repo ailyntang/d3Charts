@@ -1,6 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const req = new XMLHttpRequest();
+  req.open('GET', 'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json', true);
+  req.send();
+  req.onload = () => {
+    const json = JSON.parse(req.responseText);
     const xValues = extractXValueAsInt(json);
     const yValues = extractYValueAsInt(json);
     createScatterPlot(xValues, yValues, 5);
+  };
+});
+
 const createBrowserTitle = (title) => {
   d3.select('body')
     .append('title')
@@ -49,14 +58,6 @@ const combineXYValues = (xValues, yValues) => {
   return xValues.map((x,i) => [x, yValues[i]]);
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-  const req = new XMLHttpRequest();
-  req.open('GET', 'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json', true);
-  req.send();
-  req.onload = () => {
-    const json = JSON.parse(req.responseText);
-  };
-});
 const extractXValueAsInt = (data) => {
   const xValues = data.map((obj) => obj.Year);
   return xValues;
