@@ -1,5 +1,6 @@
     const xValues = extractXValueAsInt(json);
     const yValues = extractYValueAsInt(json);
+    createScatterPlot(xValues, yValues, 5);
 const createBrowserTitle = (title) => {
   d3.select('body')
     .append('title')
