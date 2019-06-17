@@ -68,7 +68,9 @@ const createScatterPlot = (xValues, yValues, radius) => {
      .attr('r', radius);
 
   // Create axes
-  const xAxis = d3.axisBottom(xScale);
+  const xAxis = d3.axisBottom(xScale)
+                  .tickFormat(d3.format('d'));
+                  
   svg.append('g')
      .attr('id', 'x-axis')
      .attr('transform', 'translate(0,' + yRangeMin + ')')
