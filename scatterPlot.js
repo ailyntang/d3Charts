@@ -77,6 +77,7 @@ const createScatterPlot = (xValues, yValues, radius) => {
   const yAxis = d3.axisLeft(yScale);
   svg.append('g')
      .attr('id', 'y-axis')
+     .attr('transform', 'translate(50,0)')
      .call(yAxis);
 };
 
