@@ -107,6 +107,3 @@ const extractYValueAsInt = (data) => {
   const yValues = data.map((obj) => obj.Seconds);
   return yValues;
 };
-
-
-
