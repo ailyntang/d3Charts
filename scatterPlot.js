@@ -45,7 +45,7 @@ const createScatterPlot = (xValues, yValues, radius) => {
 
   const yRangeMin = chartHeight + axisPadding;
   const yRangeMax = axisPadding;
-  const yScale = d3.scaleLinear()
+  const yScale = d3.scaleTime()
                    .domain([d3.min(yValues), d3.max(yValues)])
                    .range([yRangeMin, yRangeMax]);
 
