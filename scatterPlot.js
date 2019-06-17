@@ -17,6 +17,8 @@ const createBrowserTitle = (title) => {
     .text(title);
 };
 
+createBrowserTitle("Doping in Alpe d'Huez Races");
+
 const createScatterPlot = (xValues, yValues, radius) => {
   const svgWidth = 800;
   const svgHeight = 500;
