@@ -41,9 +41,11 @@ const createScatterPlot = (xValues, yValues, radius) => {
                    .domain([d3.min(xValues), d3.max(xValues)])
                    .range([xRangeMin, xRangeMax]);
 
+  const yRangeMin = chartHeight + axisPadding;
+  const yRangeMax = axisPadding;
   const yScale = d3.scaleLinear()
                    .domain([d3.min(yValues), d3.max(yValues)])
-                   .range([chartHeight, 0]);
+                   .range([yRangeMin, yRangeMax]);
 
   const tooltip = d3.select('body')
                     .data(xyValues)
