@@ -49,12 +49,6 @@ const createScatterPlot = (xValues, yValues, radius) => {
                    .domain([d3.min(yValues), d3.max(yValues)])
                    .range([yRangeMin, yRangeMax]);
 
-  const tooltip = d3.select('body')
-                    .data(xyValues)
-                    .append('div')
-                    .attr('id', 'tooltip')
-                    .attr('data-year', (d) => d[0]);
-
   // Create data points
   svg.selectAll('circle')
      .data(xyValues)
