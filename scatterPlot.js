@@ -114,3 +114,13 @@ const extractYValueAsInt = (data) => {
   const yValues = data.map((obj) => obj.Seconds);
   return yValues;
 };
+
+/**
+ * This takes information from a particularly structured json (url below) and converts the json into a tooltip.
+ * This function is not reusable for other jsons.
+ * @param {json} json A `json` from https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json
+ * return {array} An array of strings to display as a tooltip
+*/
+const createTooltipData = (json) => {
+
+};
