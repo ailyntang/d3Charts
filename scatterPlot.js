@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const json = JSON.parse(req.responseText);
     const xValues = extractXValueAsInt(json);
     const yValues = extractYValueAsDate(json);
+    const tooltipData = createTooltipData(json);
     createScatterPlot(xValues, yValues, 5);
   };
 });
