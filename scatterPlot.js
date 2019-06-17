@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   req.onload = () => {
     const json = JSON.parse(req.responseText);
     const xValues = extractXValueAsInt(json);
-    const yValues = extractYValueAsInt(json);
+    const yValues = extractYValueAsDate(json);
     createScatterPlot(xValues, yValues, 5);
   };
 });
