@@ -122,5 +122,12 @@ const extractYValueAsInt = (data) => {
  * return {array} An array of strings to display as a tooltip
 */
 const createTooltipData = (json) => {
+  const output = json.map((obj) => {
+    const line1 = obj.Name + ' (' + obj.Nationality + ')';
+    const line2 = 'Year: ' + obj.Year + ', Time: ' + obj.Time;
+    const line3 = obj.Doping;
+    return line1 + '\n' + line2 + '\n' + line3;
+  });
 
+  return output;
 };
