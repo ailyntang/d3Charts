@@ -81,7 +81,7 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData) => {
 
   // Create tooltip
   svg.selectAll('circle')
-     .data(xyValues)
+     .data(tooltipData)
      .append('title')
      .attr('id', 'tooltip')
      .text((d) => d);
