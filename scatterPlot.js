@@ -25,6 +25,7 @@ const createScatterPlot = (xValues, yValues, radius) => {
   const chartWidth = svgWidth - (chartPadding * 2);
   const chartHeight = svgHeight - (chartPadding * 2);
 
+  const axisPadding = 20;
   const xyValues = combineXYValues(xValues, yValues);
 
   // Create svg container
