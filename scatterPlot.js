@@ -35,9 +35,11 @@ const createScatterPlot = (xValues, yValues, radius) => {
                 .attr('height', svgHeight);
 
   // Create scales
+  const xRangeMin = chartPadding + axisPadding;
+  const xRangeMax = chartWidth + axisPadding;
   const xScale = d3.scaleLinear()
                    .domain([d3.min(xValues), d3.max(xValues)])
-                   .range([chartPadding, chartWidth]);
+                   .range([xRangeMin, xRangeMax]);
 
   const yScale = d3.scaleLinear()
                    .domain([d3.min(yValues), d3.max(yValues)])
