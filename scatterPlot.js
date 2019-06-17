@@ -77,6 +77,13 @@ const createScatterPlot = (xValues, yValues, radius) => {
      .attr('id', 'y-axis')
      .attr('transform', 'translate(50,0)')
      .call(yAxis);
+
+  // Create tooltip
+  svg.selectAll('circle')
+     .data(xyValues)
+     .append('title')
+     .attr('id', 'tooltip')
+     .text((d) => d);
 };
 
 const combineXYValues = (xValues, yValues) => {

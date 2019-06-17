@@ -16,6 +16,8 @@ Not all the freeCodeCamp tests pass. The failed tests are those which I deem as 
 
 For example, in the bar chart project, I chose to convert the date string "1950-01-01" to a real date, using `new Date("1950-01-01")`. The test failed, as it was looking for a string rather than a `Date`. I chose to let this fail rather than refactor my code. Doing my best to prioritise my time effectively for learning, rather than perfectionism in an imperfect, codenewbie world.
 
+Similarly, I have not tried to pass the tooltip tests. Instead I have focused on ensuring the tooltips I have convey meaningful information to the user.
+
 **NOT DRY code**
 
 If you delve into the `.js` files, you'll notice that I've written the same methods multiple times. Very un-DRY of me (Don't Repeat Yourself). It would have been more efficient to export the methods and re-use them.
