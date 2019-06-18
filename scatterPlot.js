@@ -59,7 +59,7 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData) => {
      .attr('data-xvalue', (d) => d[0])
      .attr('data-yvalue', (d) => d[1])
      .attr('cx', (d) => xScale(d[0]))
-     .attr('cy', (d) => chartHeight - yScale(d[1]))
+     .attr('cy', (d) => yScale(d[1]))
      .attr('r', radius);
 
   // Create axes
