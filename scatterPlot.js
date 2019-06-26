@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const xValues = extractXValueAsInt(json);
     const yValues = extractYValueAsDate(json);
     const tooltipData = createTooltipData(json);
-    createScatterPlot(xValues, yValues, 5, tooltipData);
     const dopingData = json.map((obj) => obj.Doping);
+    createScatterPlot(xValues, yValues, 5, tooltipData, dopingData);
   };
 });
 
@@ -21,7 +21,7 @@ const createBrowserTitle = (title) => {
 
 createBrowserTitle("Doping in Alpe d'Huez Races");
 
-const createScatterPlot = (xValues, yValues, radius, tooltipData) => {
+const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) => {
   const svgWidth = 800;
   const svgHeight = 500;
 
