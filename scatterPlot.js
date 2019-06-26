@@ -30,7 +30,7 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData) => {
   const chartHeight = svgHeight - (chartPadding * 2);
 
   const axisPadding = 20;
-  const xyValues = combineXYValues(xValues, yValues);
+  const xyValues = combineXYValues(xValues, yValues, dopingData);
 
   // Create svg container
   const svg = d3.select('body')
