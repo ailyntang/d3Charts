@@ -42,7 +42,7 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) =>
   const xRangeMin = chartPadding + axisPadding;
   const xRangeMax = chartWidth + axisPadding;
   const xScale = d3.scaleLinear()
-                   .domain([d3.min(xValues), d3.max(xValues)])
+                   .domain([d3.min(xValues)-1, d3.max(xValues)])
                    .range([xRangeMin, xRangeMax]);
 
   const yRangeMin = chartHeight + axisPadding;
