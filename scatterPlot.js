@@ -88,12 +88,12 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData) => {
      .text((d) => d);
 };
 
-const combineXYValues = (xValues, yValues) => {
+const combineXYValues = (xValues, yValues, dopingData) => {
   if (xValues.length != yValues.length) {
     throw new Error('There are different numbers of x and y values.');
   }
 
-  return xValues.map((x,i) => [x, yValues[i]]);
+  return xValues.map((x,i) => [x, yValues[i], dopingData[i]]);
 };
 
 const extractXValueAsInt = (data) => {
