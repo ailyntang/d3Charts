@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const yValues = extractYValueAsDate(json);
     const tooltipData = createTooltipData(json);
     createScatterPlot(xValues, yValues, 5, tooltipData);
+    const dopingData = json.map((obj) => obj.Doping);
   };
 });
 
