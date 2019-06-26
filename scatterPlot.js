@@ -61,7 +61,11 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) =>
      .attr('data-yvalue', (d) => d[1])
      .attr('cx', (d) => xScale(d[0]))
      .attr('cy', (d) => yScale(d[1]))
-     .attr('r', radius);
+     .attr('r', radius)
+     .style('fill', (d) => {
+      if (d[2] === "") return '#008000';
+      return '#e0115f';
+    });
 
   // Create axes
   const xAxis = d3.axisBottom(xScale)
