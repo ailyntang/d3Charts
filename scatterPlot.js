@@ -48,6 +48,24 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) =>
     .style('text-align', 'center')
     .style('font-size', '12px');
 
+  // Create legend
+  d3.select('body')
+    .append('div')
+    .attr('id', 'legend')
+    .text('No doping allegations')
+    .style('font-family', 'Verdana')
+    .style('text-align', 'center')
+    .style('font-size', '12px')
+    .style('color', '008000');
+
+  d3.select('body')
+    .append('div')
+    .text('Doping allegations')
+    .style('font-family', 'Verdana')
+    .style('font-size', '12px')
+    .style('text-align', 'center')
+    .style('color', 'e0115f');
+
   // Create svg container
   const svg = d3.select('body')
                 .append('svg')
@@ -106,14 +124,6 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) =>
      .append('title')
      .attr('id', 'tooltip')
      .text((d) => d);
-
-  // Create legend
-  d3.select('body')
-    .append('div')
-    .attr('id', 'legend')
-    .text('No doping allegations')
-    .style('color', '008000');
-
 };
 
 const combineXYValues = (xValues, yValues, dopingData) => {
