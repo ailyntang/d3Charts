@@ -32,6 +32,14 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) =>
   const axisPadding = 20;
   const xyValues = combineXYValues(xValues, yValues, dopingData);
 
+
+  // Create title
+  d3.select('body')
+    .append('div')
+    .text("35 fastest rides up Alpe D'Huez: 29 rides have doping allegations")
+    .style('text-align', 'center')
+    .style('font-family', 'Verdana');
+
   // Create svg container
   const svg = d3.select('body')
                 .append('svg')
