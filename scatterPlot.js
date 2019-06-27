@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 });
 
-const createBrowserTitle = (title) => {
-  d3.select('body')
-    .append('title')
-    .attr('id', 'title')
-    .text(title);
-};
+// const createBrowserTitle = (title) => {
+//   d3.select('body')
+//     .append('title')
+//     .attr('id', 'title')
+//     .text(title);
+// };
 
-createBrowserTitle("Doping in Alpe d'Huez Races");
+// createBrowserTitle("Doping in Alpe d'Huez Races");
 
 const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) => {
   const svgWidth = 800;
