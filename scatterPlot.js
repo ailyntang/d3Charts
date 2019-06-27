@@ -90,6 +90,14 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) =>
      .append('title')
      .attr('id', 'tooltip')
      .text((d) => d);
+
+  // Create legend
+  d3.select('body')
+    .append('div')
+    .attr('id', 'legend')
+    .text('No doping allegations')
+    .style('color', '008000');
+
 };
 
 const combineXYValues = (xValues, yValues, dopingData) => {
