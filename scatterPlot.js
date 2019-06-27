@@ -40,6 +40,14 @@ const createScatterPlot = (xValues, yValues, radius, tooltipData, dopingData) =>
     .style('text-align', 'center')
     .style('font-family', 'Verdana');
 
+  // Create subtitle
+  d3.select('body')
+    .append('div')
+    .text('Time in minutes by year')
+    .style('font-family', 'Verdana')
+    .style('text-align', 'center')
+    .style('font-size', '12px');
+
   // Create svg container
   const svg = d3.select('body')
                 .append('svg')
