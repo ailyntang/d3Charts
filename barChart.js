@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const json = JSON.parse(req.responseText);
     const xValues = json.data.map((d) => new Date(d[0]));
     const yValues = json.data.map((d) => d[1]);
-    createBrowserTitle("USA's GDP");
+    createBrowserTitle("d3 charts for freeCodeCamp projects");
     createChartTitle("USA's GDP by quarter (US$ billions)")
     createBarChart(xValues, yValues);
   };
